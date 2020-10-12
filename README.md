@@ -2,6 +2,8 @@
 
 This package is a server written in Java for the [Moome](https://github.com/BlackberryCode/moome) game.
 
+Please excuse how poorly written this is; I wrote it when in middle school.
+
 # Installation
 
 ## Manual
