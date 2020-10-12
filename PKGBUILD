@@ -55,6 +55,6 @@ package() {
     mkdir -p "$pkgdir/usr/share/moome-server"
     
     # copy files over and change perms
-    rinstall "${srcdir}/${pkgname}-${pkgver}/src/_run.sh" "${pkgdir}/usr/bin/moome-server" --mode=755 --owner="root" --group="root"
+    install "${srcdir}/${pkgname}-${pkgver}/src/_run.sh" "${pkgdir}/usr/bin/moome-server" --mode=755 --owner="root" --group="root"
     rinstall "${srcdir}/${pkgname}-${pkgver}/src" "${pkgdir}/usr/share/moome-server" --mode=755 --owner="root" --group="root"
 }
