@@ -34,8 +34,9 @@ prepare() {
 build() {
     # build
 
+    #cd "${srcdir}/${pkgname}-${pkgver}"
     cd "${srcdir}/${pkgname}-${pkgver}"
-    
+    ./compile.sh
 }
 
 check() {
@@ -45,13 +46,9 @@ check() {
     
 }
 
-post_install() {
-    printf "Compiling %s...\n" "${pkgname}"
-    /usr/share/moome-server/_compile.sh
-}
-
 package() {
     # ensure target directories exist
+    mkdir -p "$pkgdir/usr/bin"
     mkdir -p "$pkgdir/usr/share/moome-server"
     
     # copy files over and change perms
